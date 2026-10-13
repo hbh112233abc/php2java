@@ -1,0 +1,25 @@
+{
+  // 优先使用项目自带的 Maven Wrapper，保证构建与依赖解析一致
+  "maven.executable.preferWrapper": true,
+  // 关闭与本教程工作区无关的 Gradle 扫描，避免无谓的资源占用
+  "java.import.gradle.enabled": false,
+  // 让 Java / Maven 扩展忽略与 Spring Boot 项目无关的目录与文件，
+  // 减少扫描干扰，确保 examples/demo 能被干净地作为 Maven 项目导入
+  "java.import.exclusions": [
+    "images/**",
+    "examples/Demo.java"
+  ],
+  // 不把图片等二进制目录显示在资源管理器中，保持工作区整洁
+  "files.exclude": {
+    "**/.git": true
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell (UTF-8)",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell (UTF-8)": {
+      "source": "PowerShell",
+      "args": ["-NoExit", "-Command", "chcp 65001 | Out-Null"]
+    }
+},
+"java.compile.nullAnalysis.mode": "automatic"
+
+}

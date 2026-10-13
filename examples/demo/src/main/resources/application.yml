@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: php2java-v0.0.1
+  profiles:
+    active: dev

@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AdminApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/examples/SzAdmin/backend",
+            "mainClass": "com.sz.AdminApplication",
+            "projectName": "sz-service-admin"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/examples/demo",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo",
+            "args": "",
+            "vmArgs": "-Dspring.devtools.restart.enabled=true -Dspring.devtools.restart.poll-interval=2000 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7637 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=demo",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Debug DemoApplicationTests",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/examples/demo",
+            "mainClass": "com.example.demo.DemoApplicationTests",
+            "projectName": "demo"
+        }
+    ]
+}
